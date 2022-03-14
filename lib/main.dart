@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/bottom_navigation/bottom_navigation.dart';
-import 'package:mealapp/main_drawer/filters.dart';
+
 import 'package:mealapp/models/meal.dart';
+import 'package:mealapp/screens/bottom_navigation/bottom_navigation.dart';
 import 'package:mealapp/screens/category_meal/category_meal.dart';
 import 'package:mealapp/screens/details_meal_screen/details_meal_screen.dart';
 import 'package:mealapp/screens/dummy_data.dart';
+import 'package:mealapp/screens/main_drawer/filters.dart';
 
 
 void main() {
@@ -92,7 +93,7 @@ return _favoriteMeals.any((meal) => meal.id ==id );
       routes: {
         '/':(context)=>TabBottom(favoirteMeals: _favoriteMeals,),
         CategoryMealScreen.routName: (context)=> CategoryMealScreen(availabelMeals :_availbelMeals),
-        DetailsMealScreen.routName : (context)=> DetailsMealScreen(toggleFavorites: _toggleFavorites,_favoriteMeals),
+        DetailsMealScreen.routName : (context)=> DetailsMealScreen(toggelFavorites: _toggleFavorites,isFavorite: _isMealFavorite,),
         Filters.routName:(context)=>Filters(currentFilters: _filters,  saveFilters: _setFilters,)
       },
     );

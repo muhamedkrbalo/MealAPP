@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mealapp/main_drawer/main_drawer.dart';
+
 import 'package:mealapp/screens/category_meal/category_meal.dart';
 import 'package:mealapp/screens/dummy_data.dart';
+import 'package:mealapp/screens/main_drawer/main_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
